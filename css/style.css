@@ -1,0 +1,31 @@
+#logo {
+  text-decoration: none;
+  text-align: center;
+}
+
+#cssDesc {
+  background-color: #558000;
+  color: white;
+  text-shadow: #000;
+}
+
+.footer {
+  margin-top: 30em;
+}
+.center {
+  text-align: center;
+}
+
+.bumblebee li {
+  list-style: none;
+  font-size: 1.5em;
+}
+
+.petFish {
+  margin-top: 3em;
+  border-radius: 30px;
+}
+
+.indent {
+  padding-left: 10px;
+}
