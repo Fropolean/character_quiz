@@ -1,5 +1,7 @@
 $(function() {
   $("form#survey").submit(function(event) {
+    var question1 = $("select#question1").val();
+    var question2 = $("select#question2").val();
     var morality = $("select#morality").val();
     var cape = $("select#cape").val();
     var friends = $("select#friends").val();
@@ -8,7 +10,20 @@ $(function() {
 
 
     var hero = null;
-    var count = 0;
+    var count = 0; //if positive; strong:if zero; weak
+
+    if (question1 === "YES") {
+      count++;
+    }
+
+    if(question2 === "YES") {
+      count += 3;
+    }
+
+
+
+// alert(count);
+
 
     if(gender === "MALE") {     //male
         //morality
@@ -23,9 +38,11 @@ $(function() {
           }
           //no cape
         } else {
-          if(friends === "YES"){
+          if(friends === "YES" && count === 1){
             hero = "Iron Man";  //no cape friends
-          } else {
+          } else if(friends === "YES") {
+            hero = "Professor X";
+          } else  {
             hero = "Hulk";      //no cape no friends
           }
         }
@@ -51,7 +68,7 @@ $(function() {
           }
         }
       }
-    } else {                      //female
+    } else {//female
 
       //morality
     if (morality === "YES") {
@@ -71,9 +88,8 @@ $(function() {
           hero = "Rogue";      //no cape no friends
         }
       }
-
-
-      //morality (bad)
+      //end good female heros
+      //morality is BAD
     } else {
       //capes
       if(cape === "YES") {
@@ -93,10 +109,7 @@ $(function() {
         }
       }
     }
-
-
-
-    }
+  } //end females
     //dog
     if(dog === "YES") {
       hero = "Krypto";
