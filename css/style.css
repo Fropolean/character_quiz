@@ -1,12 +1,5 @@
-#logo {
-  text-decoration: none;
-  text-align: center;
-}
-
-#cssDesc {
-  background-color: #558000;
-  color: white;
-  text-shadow: #000;
+.result {
+  display: none;
 }
 
 .footer {
@@ -15,17 +8,20 @@
 .center {
   text-align: center;
 }
+ label {
+   display: block;
+ }
 
-.bumblebee li {
-  list-style: none;
-  font-size: 1.5em;
-}
-
-.petFish {
-  margin-top: 3em;
-  border-radius: 30px;
+select {
+  margin-bottom: 1em;
+  display: block;
 }
 
 .indent {
   padding-left: 10px;
+}
+
+button {
+  display: block;
+  margin-bottom: 1em;
 }
