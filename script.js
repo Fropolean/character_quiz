@@ -86,9 +86,9 @@ $(function() {
         }
         //no cape
       } else {
-        if(friends === "YES"){
+        if(friends === "YES" && count > 2){
           hero = "Jean Grey";  //no cape friends
-        } else if (friends === "YES" && count > 1) {
+        } else if (count >=  1) {
           hero = "Jessica Jones"; //no cape no friends med-strong
         } else {
           hero = "Rogue";      //no cape no friends
