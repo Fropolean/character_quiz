@@ -76,15 +76,20 @@ $(function() {
       //capes
       if(cape === "YES") {
         //friends
-        if(friends === "YES"){
+        if(friends === "YES" && count > 2) {
           hero = "Power Girl";  //cape friends
-        } else {
-          hero = "Batgirl (Cassandra)";    //cape no friends
+        } else if (friends === "YES" && count >= 1) {
+          hero = "Batgirl"
+        }
+          else {
+          hero = "Storm";    //cape no friends
         }
         //no cape
       } else {
         if(friends === "YES"){
           hero = "Jean Grey";  //no cape friends
+        } else if (friends === "YES" && count > 1) {
+          hero = "Jessica Jones"; //no cape no friends med-strong
         } else {
           hero = "Rogue";      //no cape no friends
         }
@@ -95,7 +100,7 @@ $(function() {
       //capes
       if(cape === "YES") {
         //friends
-        if(friends === "YES"){
+        if(friends === "YES" && count > 2) {
           hero = "Emma Frost";     //cape friends
         } else {
           hero = "Dark Angel";    //cape no friends
@@ -118,6 +123,7 @@ $(function() {
 
     $("#hero").text(hero);
     $(".result").show();
+
     event.preventDefault();
   })
 });
