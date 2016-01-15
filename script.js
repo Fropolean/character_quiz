@@ -12,15 +12,13 @@ $(function() {
     var hero = null;
     var count = 0; //if positive; strong:if zero; weak
 
-    if (question1 === "YES") {
-      count++;
-    }
-
-    if(question2 === "YES") {
+    if (question1 === "YES" && question2 === "YES") {
       count += 3;
+    } else if(question1 === "YES") {
+      count += 1;
     }
 
-
+//$("#result").append('<img src="" alt="">');
 
 // alert(count);
 
@@ -31,8 +29,11 @@ $(function() {
         //capes
         if(cape === "YES") {
           //friends
-          if(friends === "YES"){
-            hero = "Superman";  //cape friends
+          if(friends === "YES" && count > 2){
+            hero = "Superman";  //cape friends SUPER STRONG
+ //cape friends SUPER STRONG
+          } else if(friends === "YES" && count >= 1) {
+            hero = "Thor";  //cape friends not as strong
           } else {
             hero = "Batman";    //cape no friends
           }
