@@ -1,0 +1,27 @@
+.result {
+  display: none;
+}
+
+.footer {
+  margin-top: 30em;
+}
+.center {
+  text-align: center;
+}
+ label {
+   display: block;
+ }
+
+select {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.indent {
+  padding-left: 10px;
+}
+
+button {
+  display: block;
+  margin-bottom: 1em;
+}
