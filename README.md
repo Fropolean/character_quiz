@@ -24,7 +24,7 @@ Contact the authors through gitHub
 
 ## Technologies Used
 
-_Bootstrap_
+HTML, CSS, JavaScript, jQuery, and Bootstrap
 
 ### License
 
